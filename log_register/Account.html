@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Sirius">
+    <title>Geek Acount Info</title>
+
+    
+    <!-- Bootstrap core CSS -->
+<link href="../assets/bootstrap-5.1.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="test.css" rel="stylesheet">
+    <style>
+      .container {
+        max-width: 960px;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    
+  </head>
+  <body class="bg-light">
+    
+<div class="container">
+  <header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/logo.png" class="img-responsive" alt="Geek" height="40px" width="100%">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  aria-current="page" href="../blog/index.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../tech news/index1.html" >News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../learning/index.html" >Learning</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../perfect_life/index.html" >Life</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" aria-current="page" href="../about/index.html" >About</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-warning me-2" type="submit">Search</button>
+        </form>
+        <div class="btn-group btn-group-justified text-end">
+          <a id="account_1" href="login.html" class="btn btn-outline-light me-2">Login</a>
+          <a id="account_2" href="register.html" class="btn  btn-outline-light me-2">Register</a>
+        </div>    
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <main>
+    <div class="nav-scroller py-4 mb-6"></div>
+    <div class="py-5 text-center">
+      <h2>User Profile</h2>
+      <p class="lead">Below is your personal information, please complete it so as to acquire beter experience in our website.</p>
+    </div>
+
+    <div class="row g-5">
+
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary">IMPORTANT Message</span>
+          <span class="badge bg-primary rounded-pill">3</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Info collect</h6>
+              <small class="text-muted">We collect necessary info for your experience</small>
+            </div>
+            <span class="text-muted"></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Info storage</h6>
+              <small class="text-muted">Your privacy would be encrypted</small>
+            </div>
+            <span class="text-muted"></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Info display</h6>
+              <small class="text-muted">Your info will be shown along your blogs</small>
+            </div>
+            <span class="text-muted"></span>
+          </li>
+        </ul>
+
+        <form class="card p-2">
+<!--           <div class="input-group">
+            <input type="text" class="form-control" placeholder="message">
+            <button type="submit" class="btn btn-secondary">Return</button>
+          </div> -->
+          <h6 class="my-0"><br>Submit on this page<br><br>means that<br><br>you agree all above policies<br></h6>
+        </form>
+      </div>
+
+
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Info.</h4>
+        <form action="user.html" id="profile" class="needs-validation" novalidate>
+        <div hidden>
+                <input type="text" name="action" value="profile">
+                <input id="name" type="text" name="user" value="">
+            </div>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">First name</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" value="" required>
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lastName" name="lastName" value="" required>
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label">Username</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" value="" disabled="true" required>
+              <div class="invalid-feedback">
+                  Your username is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email <span class="text-muted"></span></label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+              <div class="invalid-feedback">
+                Please enter a valid email address for intensive experience.
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="phone" class="form-label">Phnoe number <span class="text-muted">(Optional)</span></label>
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="">
+              <div class="invalid-feedback">
+                Please enter a valid phone number.
+              </div>
+            </div>
+            <div class="col-md-12">
+              <label for="occupation" class="form-label">Occupation</label>
+              <select class="form-select" id="occupation" name="occupation" required>
+                <option value="">Choose...</option>
+                
+                <option>Entrepreneur</option>
+                <option>Manager</option><option>China</option>
+                <option>Technician</option>
+                <option>Teacher of Professor</option>
+                <option>Student</option>
+                <option>Liberla professions</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select your occupation.
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="address" class="form-label">Workplace</label>
+              <input type="text" class="form-control" id="address" name="address" placeholder="BeiJing Institute of Technology" required>
+              <div class="invalid-feedback">
+                Please enter your Institute.
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="country" class="form-label">Country</label>
+              <select class="form-select" id="country" name="country" required>
+                <option value="">Choose...</option>
+                <option>China</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="state" class="form-label">State</label>
+              <select class="form-select" id="state" name="state" required>
+                <option value="">Choose...</option>
+                <option>Beijing</option><option>ShangHai</option>
+              </select>
+              <div class="invalid-feedback">
+                Please provide a valid state.
+              </div>
+            </div>
+
+
+          </div>
+
+          <hr class="my-4">
+          
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="same-address" required>
+            <label class="form-check-label" for="same-address">Accept our site's
+              <a href="#">Privacy Protecion Agreement</a> </label>
+              <div class="invalid-feedback">
+                Please check.
+              </div>
+          </div>
+          <hr class="my-4">
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Complete</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <div class="nav-scroller py-4 mb-6"></div>
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2021&middot;summer from BIT by <em>Sirius</em>&nbsp;&nbsp;&nbsp;<a href="about/index.html">More</a></p>
+  </footer>
+</div>
+
+
+    <script src="../assets/bootstrap-5.1.0/js/bootstrap.bundle.min.js"></script>
+
+      <script src="../js/form-validation.js"></script>
+      <script src="../assets/jquery-3.6.0.js"></script>
+      
+      <script type="text/javascript" src="../js/user.js"></script>
+      <script>
+        var cur = getcur();
+        $("input#username").val(cur);
+        $("input#name").val(cur);
+      </script>
+      <script>
+        var user = getcur();
+        if(user != null){
+          var root = getRootPath();
+           $("#account_1").text(user);
+           $("#account_1").attr("href",root+"log_register/Account.html");
+           $("#account_2").text("Log out");
+           $("#account_2").attr("href",root+"log_register/user.html?action=logout");
+        }
+      </script>
+  </body>
+</html>

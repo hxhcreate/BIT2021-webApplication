@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Login --Geek Space</title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link href="../assets/bootstrap-5.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="../assets/bootstrap-5.1.0/js/bootstrap.min.js"></script>
+</head>
+<script type="text/javascript">
+function forgetpwd(){
+    alert("Please contact the webmaster!");
+}
+</script>
+<body>
+
+    <header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/logo.png" class="img-responsive" alt="Geek" height="50px" width="100%">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link"  aria-current="page" href="../blog/index.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="../tech news/index1.html" >News</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="../learning/index.html" >Learning</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="../perfect_life/index.html" >Life</a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link" aria-current="page" href="../about/index.html" >About</a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link" aria-current="page" href="../user/index.html" >User</a>
+              </li>
+          </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-warning me-2" type="submit">Search</button>
+        </form>
+        <div class="btn-group btn-group-justified text-end">
+          <a id="account_1" href="login.html" class="btn btn-outline-light me-2" >Login</a>
+          <a id="account_2" href="register.html" class="btn  btn-outline-light me-2">Register</a>
+        </div>    
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <div class = "box">
+        <h2>Login</h2>
+        <form action="user.html" method="get" enctype="application/x-www-form-urlencoded">
+            <div hidden>
+                <input type="text" name="action" value="login">
+            </div>
+            <div class="inputBox">
+                <input type="text"name="user" required="">
+                <label>Username</label>
+            </div>
+            <div class="inputBox">
+                <input type="password" name="pwd" required="">
+                <label>Password</label>
+            </div>
+            <input type="submit" name="" value="Submit">
+        </form>
+        <div id="tips">
+            <a class=a href="" onclick="forgetpwd()"><span>Forget password?</span></a>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <a class=a href="register.html"><span>No account?Register</span></a>
+        </div>
+    </div>
+    <script src="../assets/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/user.js"></script>
+      <script>
+        var user = getcur();
+        if(user != null){
+          var root = getRootPath();
+           $("#account_1").text(user);
+           $("#account_1").attr("href",root+"log_register/Account.html");
+           $("#account_2").text("Log out");
+           $("#account_2").attr("href",root+"log_register/user.html?action=logout");
+        }
+      </script>
+</body>
+</html>

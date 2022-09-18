@@ -1,0 +1,4 @@
+#search .search-box{
+    position: relative;
+    transform: translate(-50%,50%);
+}

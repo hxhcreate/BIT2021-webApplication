@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Sirius">
+    <title>Geek Blog</title>
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/bootstrap-5.1.0/css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="../js/blog.js"></script>
+<script type="text/javascript" src="../js/blogmgr.js"></script>
+
+    <style>
+      .form-group *{
+           padding-bottom: 1%;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../css/blog.css" rel="stylesheet">
+  </head>
+  <body onload="load_blog()">
+    
+
+<div class="container">
+  <header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/logo.png" class="img-responsive" alt="Geek" height="50px" width="100%">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  aria-current="page" href="index.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../tech news/index1.html" >News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../learning/index.html" >Learning</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../perfect_life/index.html" >Life</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" aria-current="page" href="../about/index.html" >About</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-warning me-2" type="submit">Search</button>
+        </form>
+        <div class="btn-group btn-group-justified text-end">
+          <a id="account_1" href="../log_register/login.html" class="btn btn-outline-light me-2">Login</a>
+          <a id="account_2" href="../log_register/register.html" class="btn  btn-outline-light me-2">Register</a>
+        </div>    
+      </div>
+    </div>
+  </nav>
+</header>
+</div>
+
+<div class="nav-scroller py-5 mb-6">
+</div>
+<main class="container" >
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">Erlang</strong>
+          <h3 class="mb-0">Stay on top of your Erlang deps</h3>
+          <div class="mb-1 text-muted">2021 Sep 1</div>
+          <p class="card-text mb-auto">Over the past few years, we have spent several hackweeks writing, improving···</p>
+          <a href="https://tech.nextroll.com/blog/dev/2021/09/01/erlang-rebar3-depup.html" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img  src="../images/blog_img/blog_1.jpg" class="bd-placeholder-img" width="200" height="250" focusable="false">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Python</strong>
+          <h3 class="mb-0">HyperLogLog in Python</h3>
+          <div class="mb-1 text-muted">2021 June 5</div>
+          <p class="mb-auto">We recently open-sourced python-hll, which is an implementation of HyperLogLog whose goal is ···</p>
+          <a href="https://tech.nextroll.com/blog/dev/2019/10/01/hll-in-python.html" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img  src="../images/blog_img/blog_2.jpg" class="bd-placeholder-img" width="200" height="250" focusable="false">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="row g-5">
+        <div class="col-md-8">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                From the Community
+            </h3>
+            <!--add new-->
+            <div class="row">
+                <div class="col-md-6">
+                  <h2 class="blog-post-title">Add your new blog</h2>
+                </div>
+                <form role="form" validate="" onsubmit="return dopost();">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="post_title">Title</label>
+                        <input type="text" id="post_title" class="form-control" name="title" placeholder="please input title" value="" required>
+                      </div>
+                      <div class="col-md-6">
+                         <label for="post_tags">Tags</label>
+                        <input type="text" id="post_tags" class="form-control" name="tag" placeholder="divide multiple tags with semicolon ;" value="" required>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <label for="post_sysnosis">Synosis</label>
+                        <textarea if="sys" id="post_synosis" class="form-control" rows="2" placeholder="input synosis within 20 words" required></textarea>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                         <label for="post_md">Textarea</label>
+                        <textarea  if="text" id="post_md" class="form-control" rows="4" placeholder="please input with markdown" required></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 form-group">
+                        <label class="sr-only" for="inputfile">select .md file</label>
+                        <input type="file" id="inputfile" accept=".md,.txt" onchange="fileImport()">
+                    </div>
+                  <div class="col-md-12 form-group">
+                    <input type="submit" class="btn btn-outlined-light" style="color: white; background:black">
+                  </div>
+                </form>
+              </div>
+              <hr>
+
+                <div id="blog_list" class="row mb-2"></div>
+
+      <article>
+         <div class="blog-post">
+            <h2 class="blog-post-title">UI smoke-testing with Cypress</h2>
+            <p class="blog-post-meta">August 10, 2021 by <a href="#">Hxh</a></p>
+            <p>In NextRoll, many teams are continuously working on different micro-frontend applications, many little bricks of our dashboards and products.
+
+            <p>To help these teams building homogeneous [and awesome] interfaces, we maintain a library of UI components. You can read about it in this blog post.
+
+            <p>On the wave of this philosophy of DRY and shared tools, we decided to build a tool to simplify smoke testing of our UIs.
+
+            <p> A tool that we wanted to be portable, capable of running both on the developer machine and our CI infrastructures (BuildKite and Jenkins2), and integrated with our incident escalation and monitoring systems.
+            <h3>Smoke testing</h3>
+            <p>According to Wikipedia:
+              <code class="language-sh" data-lang="sh">
+            <p>“Smoke testing is preliminary testing to reveal simple failures </p>
+            <p>severe enough to, for example, reject a prospective software release.”</p>
+            </code>
+            <p>First, let’s define the type of tests we wanted to run with this tool.
+
+            <p>Our goal was to run simple tests on our UI to detect significant issues that would disrupt the user experience on our platform. Examples of these major issues can be an application unable to load or a business-critical flow not working (e.g., creating a shining new campaign).
+
+            <p>We already have many different ways to ensure the stability of our services:
+            <ul>
+            <li>Unit and functional tests of our code, even some complex end-to-end tests that we run on pull requests.</li>
+            <li>HTTP API testing to guarantee backward compatibility of our interfaces and monitor their availability.
+            <li>Monitoring of different layers of our infrastructure, from the databases to the rate of errors of our Production API.
+            </ul>
+            <p>All of these methods have always been fundamental to detect production issues or to prevent bad deploys. Still, most of them are responsible for testing or monitoring specific parts of the system without looking at the broader picture.
+
+            <p>One of the common issues with UIs is that they may be powered by many HTTP APIs, and this set of dependencies changes over time. Also, some specific sections of the same dashboard may rely on different APIs, or someone may enable A/B testing that introduces new dependencies.
+
+            <p>At a certain point, keeping track of the impact of your back-end systems’ deployments becomes impossible.
+
+            <p>Yeah, this should never happen due to the “agreements” that an HTTP API should maintain (no breaking changes), so your API testing should cover you. But having redundancy even on testing is still a good practice because you may not be able to catch all the issues with a single type of testing.
+
+            <p>Eventually, having fast and straightforward tests that would help to detect both a bad deployment and major outages of the UI was a double achievement for our goal.
+
+            <h3>Finding the best framework for our needs</h3>
+            <p>To achieve our goal, we started by studying the best UI testing frameworks on the market to choose the perfect one for our needs.
+
+            <p>We wanted a framework that didn’t require learning new languages or complex API, possibly based on technologies/libraries already known to our teams, to reduce the learning curve to adopt our tool.
+
+            <p>A reliable framework to allow us implementing stable tests, with the possibility to visualize the test execution.
+
+            <p>Many of us already had experiences with Selenium and the effort to maintain it and ensure our tests’ stability. This time, we wanted stable tests!
+
+            <p>We also used services like New Relic Synthetics and also the DataDog alternative, for a while. They actually seem more stable than Selenium and with some excellent features, but, eventually, we were not happy to write our tests on their UIs without the ability to store them on our repositories. This also required an extra effort during the deployments because we weren’t able to automatically update the tests, and we needed to jump on their UIs to address any change on our applications. After this experience, we decided that having the ability to adopt versioning of the code and automatically update our tests after each deployment were two key features for us to simplify the operations around the release of a new version of our product.
+
+            <p>After some experiments, we found our best candidate: Cypress!
+            <h3>Cypress.io</h3>
+            <p>Cypress is an open-source framework for end-to-end testing that you can find on <a href="https://cypress.io"> https://cypress.io.</a>
+
+            <p>It has a brilliant architecture that does not rely on Selenium. Instead, Cypress is executed in the same run loop as your application, which allows the framework to have native access to the DOM, the window, your application. This approach could also allow us to intercept and modify HTTP requests efficiently, and directly connect Cypress to your Redux store.
+
+            <p>You can read more about how Cypress works on their website.
+
+            <p>Users can write tests in JavaScript or TypeScript, and Cypress already provides well-known testing libraries like Mocha, Chai, and Sinon.
+
+            <p>It supports Mocha reporters, like Mochawesome:
+              <div class="bd-clipboard">
+                <button type="button" class="btn-clipboard btn-xs" title data-bs-original-title="Copy to clipboard">Copy</button>
+              </div>
+            <div class="highlight out-lined-light">
+                <pre class="chroma" tabindex="0">
+                  <code class="language-sh" data-lang="sh">
+{
+     "reporter": "mochawesome",
+     "reporterOptions": {
+          "reportDir": "output/reports",
+          "overwrite": false,
+          "html": false,
+          "json": true
+                        }
+}
+                  </code>
+                </pre>
+            </div>
+            <p>It also records each test to a different mp4 file, so you can watch the test execution and spot any UI issue.
+            <h3>Writing a test</h3>
+            <p>Cypress API are very simple, you don’t even need to have a look at their documentation to understand this test:
+              <div class="bd-clipboard">
+                <button type="button" class="btn-clipboard btn-xs" title data-bs-original-title="Copy to clipboard">Copy</button>
+              </div>
+            <div class="highlight out-lined-light">
+                <pre class="chroma" tabindex="0">
+                  <code class="language-sh" data-lang="sh">
+describe("An example", () => {
+  before(() => {
+    // Here you can setup your tests.
+    // As example, you could log in to your application.
+    prepareYourTest();
+  });
+
+  it("Should load", () => {
+    cy.visit(
+      `${Cypress.env('HOST')}/test-url`
+    );
+    // After .visit(), we want to check if the next page H1
+    // contains "Hi!".
+    // As you can see, we don't need to wait for
+    // the page to be ready, this is on Cypress which
+    // will automatically wait for your H1 to be visible
+    // (or,  if your H1 doesn't appear, it will fail after a timeout).
+    cy.get("h1").should("contain", "Hi!");
+    // Let's also confirm that we are on the right URL.
+    cy.url().should("include", "test-url");
+
+    // Now, let's find an entry on our navbar,
+    // and let's click on it.
+    cy.get("div.main-navbar")
+      .contains("Section 1")
+      .click();
+    // Here too, we don't need to write code to
+    // wait for our application to be
+    // ready: Cypress will take care of it.
+    cy.get("div.main-page>h2").should(
+      "contain",
+      "It works!"
+    );
+  });
+});
+                  </code>
+                </pre>
+            </div>
+            <p>See? No “wait until visible” commands!
+            <h3>Distribute to our teams</h3>
+            <p>Finding the framework was not the end of our journey. We needed to make the setup as easier as possible and abstract some Cypress complexities.
+            <h3>One Docker image to rule them all</h3>
+            <p>We decided that distributing our tool as a Docker image would simplify the maintenance and the adoption of the tool.
+
+            <p>Also, Cypress requires some setup and tuning, and we wanted to abstract this to other teams.
+
+            <p>Shipping our tool as a Docker image also allows us to solve this complexity by encapsulating the Cypress instrumentation and post-processing logic. Engineers will need to provide the required config files and run the Docker command they find on the documentation.
+
+            <p>Our base image is built from one of the official Docker images for Cypress, cypress/browsers:node12.19.0-chrome86-ff82. You can find the complete list of images they prepare here: https://github.com/cypress-io/cypress-docker-images.
+
+            <p>Let’s have a look at the lifecycle of a test execution:
+            <img src="../images/blog_img/hxh1.png" width="100%"/>
+            <p>This approach requires teams to have a minimal boilerplate into the application:
+            <ul>
+              <li>A Dockerfile, to download our Docker image and load their tests into it;</li>
+              <li>Two docker-compose.yml files, one for the developer machine and another for the CI;
+              <li>The main difference between these two files is ipc: host on the developer configuration (and a volume so they can see the output of their tests).
+              <li>A JSON file representing the main configuration, which could be different on each environment to allow configuring different hosts and incident escalation policies (well, I don’t think that a failure on Staging would be worth paging an engineer during the night);
+              <li>The test files.
+            </ul>
+            <p>This allows us to store our tests on the repository and edit them using the editor we use every day. Our CI can automatically use the correct version of the tests without requiring us to perform manual adjustments after the deployment.
+
+            <p>Another benefit is that our Docker image is fully extensible, just by overriding the files contained into the base Docker image. This allows other teams to build their own Cypress tasks, fixtures, and install more plugins.
+            <h3>Test utilities</h3>
+            <p>Most of our UIs are accessible only after signing in to our application, so we built a simple utility that can be run from the before hook to instrument the session by signing in using the user that is available in the Cypress’ environment.
+
+            <p>For teams that want to use TypeScript, we also published a little NPM package to enable type hinting for Cypress and these utilities on their editor.
+            <h3>Monitoring and incident escalation</h3>
+            <p>Having a smoke testing tool not being integrated with the services we use every day would have been pretty useless.
+
+            <p>For this reason, we enable the Mochawesome reporter support in Cypress, which creates a JSON file per test file.
+
+            <p>Then, we built a simple Python script to post-process these reports:
+
+            <ol>
+              <li>It uploads all the artifacts (reports, MP4 videos, and screenshots) to a secure storage;</li>
+              <li>It emits key metrics (test duration and result) to DataDog;
+              <li>In case of failures on tests integrated with PagerDuty, it triggers an incident to escalate the issue quickly.
+              <li>Optionally, it posts a message on Slack with a summary of the results:
+            </ol>
+            <img src="../images/blog_img/hxh2.png" width="100%"/>
+            <h3>Monitoring and incident escalation</h3>
+            <p>Having a smoke-tester running on our infrastructure means that we should monitor its stability, too, to ensure it is appropriately testing our applications.
+
+            <p>This was as easy as setting a DataDog monitor that would alert if the smoke testing tool doesn’t emit metrics for a while.
+            <h3>Reducing the noise</h3>
+            <p>Nobody wants to wake up in the middle of the night because they have been paged for a false alarm. It’s a pain, which reduces the confidence in the smoke testing.
+            <p>We can mitigate this situation by applying a retry logic, and we are doing this by rerunning the whole suite if it fails. In the future, we plan to retry just the tests that failed to reduce the notification delay in case of serious issues.
+
+            <p>The tool also takes care not to repeatedly send the same notifications if a specific test keeps failing. It’s capable of resolving the PagerDuty incident once the test succeeds again.
+
+            <p>Also, it’s not very nice when you’ve been paged for an issue that is not under your domain, and you just need to point to the right team.
+            <p>This can easily happen on UIs that have multiple ownerships. In our case, a team is usually in charge of the application, and various teams own sub-sections or specific features.
+            <p>Mitigating this was a little bit harder than implementing a retry logic.
+            <p>We chose to resolve this by implementing a hierarchy model that prevents incident escalation to the branches of a failed node.
+            <h3>Hierarchy of tests</h3>
+            <p>Let’s see an example:
+              <img src="../images/blog_img/hxh3.png" width="100%"/>
+            <p>We have three teams:
+            <ul>
+              <li>Team A is the team owning the application. They are responsible for any significant outage that causes the UI not to load at all due to, for instance, infrastructure issues.</li>
+              <li>Team B and C own sub-sections of the UI, either critical (P0) or non-critical (P1 or lower) sections.
+
+            </ul>
+            <p>Let’s assume the whole UI doesn’t load at all because the web service is down. If the root fails, our tool doesn’t notify the other teams:
+              <img src="../images/blog_img/hxh4.png" width="100%"/>
+            <p>Team A will be alerted of the issue, while team B and C will sleep peacefully because the failures on their tests were caused by the application outage.
+
+            <p>This concept of hierarchy allows us to define custom notification rules for each different team.
+            <h3>Case study: smoke testing the email verification</h3>
+            <p>As we recently started to roll out an email verification process during the signup flow, we wanted to ensure its stability over time.
+
+            <p>To properly test this flow, we set up a smoke testing instance that’s able to connect to the email server to grab the verification token and complete the process. This was as easy as declaring a new Cypress task that relies on the NPM package gmail-tester to return the email messages from our Gmail-powered account.
+
+            <p>As this new flow has been implemented on various back-end and UIs, this smoke testing tool is a nice solution for us to ensure that the interactions between these systems will continue to be stable over time.
+            <h3>Conclusions</h3>
+            Almost one year has passed since the first release of this tool, and various teams are currently using it for their own applications.
+            <h3>Was Cypress a good choice?</h3>
+            Yes, for many reasons:
+            <ul>
+              <li>We managed to easily integrate it into our workflow.</li>
+              <li>Teams are adopting our tool with low friction, and some of them also made some contributions to add new Cypress plugins or features to it.
+              <li>Overall, our simple tests look stable.</li>
+            </ul>
+            <p>Also, the ability to easily see the test executions by looking at the recordings is a key feature for us, and it actually helped us during nightly incidents.
+            <h3>Would you expand the scope of the tool?</h3>
+            <p>Right now, we are only using it for smoke testing, and we don’t plan to support other types of tests like E2E or acceptance testing.
+
+            <p>Even though Cypress is far above Selenium in terms of stability, it’s not so easy to define new tests for complex scenarios. So, following the test pyramid and creating tests only for the critical UI paths is, in our experience, the best approach.
+            <h3>Next steps</h3>
+            <p>We always want to improve our tools, so we already have some ideas:
+            <ul>
+              <li>Rework the retry logic (we mentioned this before) only to retry the failed tests, as right now, we are retrying the entire suite.</li>
+              <li>Play with the Performance API to extract more metrics regarding our UIs, like the Resource Timing, which allows us to retrieve network timing data regarding the loading of the application’s resources.</li>
+            </ul>
+         </div>
+            
+      </article>
+      
+
+      <article>
+         <div class="blog-post">
+           
+        </div>
+         
+      </article>
+     
+
+      <nav class="blog-pagination" aria-label="Pagination">
+        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Older</a>
+        <a class="btn btn-outline-primary" href="index.html">Newer</a>
+       
+      </nav>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-light rounded">
+          <div class="row">
+            <div class="col-mb-4">
+                <div class="nav-scroller py-0 mb-7">
+                </div>
+
+
+                <svg t="1630723466977" class="icon item-align" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2167" width="50" height="50"><path d="M511.435945 302.584307m-302.584307 0a302.584307 302.584307 0 1 0 605.168614 0 302.584307 302.584307 0 1 0-605.168614 0Z" fill="#515151" p-id="2168"></path><path d="M803.763157 603.459098c-23.933222-18.804674-58.123539-17.095159-80.347245 5.128548-54.704508 54.704508-129.923205 88.894825-213.689483 88.894825s-158.984975-34.190317-213.689482-88.894825c-22.223706-22.223706-56.414023-25.642738-80.347245-5.128548C123.375845 682.096828 54.995211 782.958264 32.771505 921.429048c-8.547579 56.414023 30.771285 102.570952 88.894824 102.570952H902.915077c56.414023 0 97.442404-46.156928 88.894825-102.570952-23.933222-138.470785-92.313856-239.33222-188.046745-317.96995z" fill="#515151" p-id="2169"></path></svg>
+                <div class="dropdown open">
+                  <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown trigger
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <li><a href="#">good</a></li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Hot Blogger</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="./level2/hxh.html" target="_blank">Xuhao Hu</a></li>
+            <li><a href="./level2/cqy.html" target="_blank">Qiyang Chen</a></li>
+            <li><a href="./level2/qyy.html" target="_blank">YingYu Qin</a></li>
+            <li><a href="./level2/zzh.html" target="_blank">ZiHan Zhuang</a></li>
+            <li><a href="https://blog.csdn.net/stpeace/" target="_blank">CSDN:stpeace</a></li>
+            <li><a href="https://blog.csdn.net/qq_41185868" target="_blank">CSDN:programmer of Virgo</a></li>
+            <li><a href="https://blog.csdn.net/yjclsx" target="_blank">CSDN:yjclsx</a></li>
+            <li><a href="https://github.com/JakeWharton" target="_blank">Github:JakeWharton</a></li>
+            <li><a href="https://github.com/chrisbanes" target="_blank">Github:Chris Banes</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ol>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+            <li><a href="https://www.csdn.net/" target="_blank">CSDN</a></li>
+            <li><a href="https://stackoverflow.com" target="_blank">Stackoverflow</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="text-muted py-5">
+    <div class="container">
+        <p class="float-end mb-1">
+            <a href="#">Back to top</a>
+        </p>
+        <p class="mb-1">© 2021·summer from BIT by <em>Sirius</em> &nbsp;&nbsp;&nbsp;<a href="index.html">More</a> </p>
+    </div>
+</footer>
+
+<script src="../assets/bootstrap-5.1.0/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/user.js"></script>
+      <script>
+        var user = getcur();
+        if(user != null){
+          var root = getRootPath();
+           $("#account_1").text(user);
+           $("#account_1").attr("href",root+"log_register/Account.html");
+           $("#account_2").text("Log out");
+           $("#account_2").attr("href",root+"log_register/user.html?action=logout");
+        }
+      </script>
+  </body>
+</html>

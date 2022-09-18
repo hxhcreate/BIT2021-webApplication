@@ -1,0 +1,125 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Sirius">
+    <title>Geek Blog --CQY</title>
+    <link href="../../assets/bootstrap-5.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/blog.rtl.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+        <img src="../../images/logo.png" class="img-responsive" alt="Geek" height="50px" width="100%">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="../../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  aria-current="page" href="../index.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../../tech news/index1.html" >News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../../learning/index.html" >Learning</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../../perfect_life/index.html" >Life</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" aria-current="page" href="../../about/index.html" >About</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-warning me-2" type="submit">Search</button>
+        </form>
+        <div class="btn-group btn-group-justified text-end">
+          <a id="account_1" href="../../log_register/login.html" class="btn btn-outline-light me-2">Login</a>
+          <a id="account_2" href="../../log_register/register.html" class="btn  btn-outline-light me-2">Register</a>
+        </div>    
+      </div>
+    </div>
+  </nav>
+</header>
+    <div class="container">
+     <div class="nav-scroller py-4 mb-6"></div>
+      <div class="blog-header">
+        <hr>
+        <h1 class="blog-title">CQY's homepage</h1>
+        <p class="lead blog-description">Nothing seek,nothing find!</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+          <div class="blog-post">
+            <h2 class="blog-post-title">My blog1</h2>
+            <p class="blog-post-meta">September 1, 2021 by <a href="#">cqy</a></p>
+            <p>Building on the success of the previous editions, the Textbook of Drug Design and Discovery. </p>
+            <p>Fifth Edition, has been thoroughly revised and updated to provide a complete source of information on all facets of drug design and discovery for students of chemistry, pharmacy, pharmacology, biochemistry, and medicine.</p>
+            <blockquote>
+              <p>The information is presented in an up-to-date review form with an underlying and fundamental focus on the educational aspects.</p>
+            </blockquote>          
+          </div>
+          <div class="blog-post">
+            <h2 class="blog-post-title">My blog2</h2>
+            <p class="blog-post-meta">September 3, 2021 by <a href="#">cqy</a></p>
+            <p>The Educated Heart demystifies the important issues of establishing professional relationships in the manual therapies. The author uses humor, compassion, and humanity to present this complicated content in terms that are highly readable and engaging. </p>
+            <blockquote>
+              <p>The book includes real-life examples and practical solutions to dilemmas and sensitive situations that all bodyworkers face in their everyday practice.</p>
+            </blockquote>
+            <p>A companion website includes downloadable video clips depicting problematic boundary situations commonly experienced by bodyworkers and massage therapists.</p>            
+          </div>
+          <nav>
+
+          </nav>
+        </div>
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <img src="../../images/team_img/CQY.png" width="100%"/>
+            <h4>QiYang Chen</h4>
+            <p>BIT 2020 vegetable dog</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Contact</h4>
+            <ul>
+              <li>cqy230882@163.com</li>
+              <li><address>BIT,Liangxiang,Beijing</address></li>
+            </ul>
+          </div>
+        </div>
+     </div>
+    </div>
+    <footer class="text-muted py-5">
+      <div class="container">
+        <p class="float-end mb-1">
+          <a href="#">Back to top</a>
+        </p>
+        <p class="mb-1">© 2021·summer from BIT by <em>Sirius</em> &nbsp;&nbsp;&nbsp;<a href="index.html">More</a> </p>
+      </div>
+    </footer>  
+    <script src="../../assets/bootstrap-5.1.0/js/bootstrap.min.js"></script>
+    <script src="../../assets/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../../js/user.js"></script>
+      <script>
+        var user = getcur();
+        if(user != null){
+          var root = getRootPath();
+           $("#account_1").text(user);
+           $("#account_1").attr("href",root+"log_register/Account.html");
+           $("#account_2").text("Log out");
+           $("#account_2").attr("href",root+"log_register/user.html?action=logout");
+        }
+      </script>
+  </body>
+</html>
